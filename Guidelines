@@ -9,18 +9,18 @@
     https://www.virtualbox.org/  or  https://www.vmware.com/in/products/workstation-pro/workstation-pro-evaluation.html
     
 
-3. Since this is a very basic setup and I use this for testing purpose I will go with the below configuration. You should assign the          resources based upon your need,
+3. Since this is a very basic setup and I use this for testing purpose I will go with the below configuration. You should assign the resources based upon your need,
 
         Interface : Single(NAT)
         RAM       : 4GB
         Storage   : 80GB
         Core      : 2
-4. Once you have logged in the VM, kindly check if you are able to ping any websites to ensure the internet connectivity to VM. If we get    packets back then its perfectly fine and you can move with step 5. Below are the few issues which I face during this step,
+4. Once you have logged in the VM, kindly check if you are able to ping any websites to ensure the internet connectivity to VM. If we get packets back then its perfectly fine and you can move with step 5. Below are the few issues which I face during this step,
 
       a. Interface not showing up,
       b. No IP assigned to my interface
       
-      Since this is a terminal based installation you cannot find any GUI buttons to enable and disable network interfaces. Find the       below steps to overcome the issue mentioned above. Enter the below command in your terminal and you will see a terminal UI which           contains control units for playing with the interfaces.
+      Since this is a terminal based installation you cannot find any GUI buttons to enable and disable network interfaces. Find the below steps to overcome the issue mentioned above. Enter the below command in your terminal and you will see a terminal UI which contains control units for playing with the interfaces.
       
       a. nmtui
 
