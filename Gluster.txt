@@ -1,0 +1,16 @@
+# CentOS-Gluster-3.8.repo
+# Please see http://wiki.centos.org/SpecialInterestGroup/Storage for more
+# information
+
+[centos-gluster38]
+name=CentOS-$releasever - Gluster 3.8
+
+baseurl=http://buildlogs.centos.org/centos/$releasever/storage/$basearch/gluster-3.8/
+gpgcheck=0
+enabled=1
+
+[centos-gluster38-test]
+name=CentOS-$releasever - Gluster 3.8 Testing
+baseurl=http://buildlogs.centos.org/centos/$releasever/storage/$basearch/gluster-3.8/
+gpgcheck=0
+enabled=0
