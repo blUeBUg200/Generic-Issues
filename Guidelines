@@ -37,8 +37,8 @@
       
       $ yum install perl
       
-      $ yum install -y open-vm-tools(CentOS 7)
-      $ ls /usr/bin/vmtoolsd (You should see the file)
+      $ yum install -y open-vm-tools                      #(CentOS 7)
+      $ ls /usr/bin/vmtoolsd                              #(You should see the file)
 
       Perform a VM reboot,
       $ reboot
