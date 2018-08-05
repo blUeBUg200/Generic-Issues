@@ -76,4 +76,10 @@
     
 Follow the installation steps to complete QRadar installation.
 
+8. Start the services
+
+    a. service hostservices start
+    b. service hostcontext start
+    c. service tomcat start
+
 Now you have a QRadar SIEM up and running ! 
