@@ -30,3 +30,50 @@
   
       $ systemctl restart network
       
+5. Perform CentOS updates with perl and VM-Tools.
+
+      $ yum update "Development Tools"
+      $ yum update
+      
+      $ yum install perl
+      
+      $ yum install -y open-vm-tools(CentOS 7)
+      $ ls /usr/bin/vmtoolsd (You should see the file)
+
+      Perform a VM reboot,
+      $ reboot
+      
+6. I have faced issue while installing QRadar due to "CentOS-7 - Gluster 3.8" dependency issue. Perform the below to overcome this,
+    
+     $ sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config && cat /etc/selinux/config
+ 
+     $ echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
+ 
+     $ yum -y update && yum -y upgrade 
+ 
+     $ reboot
+
+  Once VM is rebooted. Edit the file mentioned below,
+
+    $ vi /etc/yum.repos.d/CentOS-Gluster-3.8.repo
+    
+  I have uploaded the repo file for your ease. File Name : "Gluster.txt". Once having the new file, perform a update,
+    
+    $ yum update
+    
+  You will see the centos-gluster38 added.
+  
+7. Move the QRadar ISO to VM. Either through WinSCP or through VM shared folder.
+
+    a. https://winscp.net/eng/download.php
+    b. https://theholmesoffice.com/how-to-share-folders-between-windows-and-ubuntu-using-vmware-player/
+    
+    Commands to install QRadar,
+    
+    mkdir /media/cdrom
+    mount -o loop /tmp/QradarCE7_3_0.GA.iso    /media/cdrom
+    /media/cdrom/setup
+    
+Follow the installation steps to complete QRadar installation.
+
+Now you have a QRadar SIEM up and running ! 
