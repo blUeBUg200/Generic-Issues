@@ -43,7 +43,7 @@
       Perform a VM reboot,
       $ reboot
       
-6. I have faced issue while installing QRadar due to "CentOS-7 - Gluster 3.8" dependency issue. Perform the below to overcome this,
+6. I have faced issue while installing QRadar due to "CentOS-7 - Gluster 3.8" dependency issue(screenshot attached in name "Gluster_Error.PNG"). Perform the below to overcome this,
     
      $ sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config && cat /etc/selinux/config
  
